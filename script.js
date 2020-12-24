@@ -29,8 +29,7 @@ function generatePassword() {
   passLength = prompt("How long do you want your password to be? (Enter between 8 and 128 characters)");
   // If user clicks cancel, then abort the generatePassword function
   if (passLength === null) {
-    return alert("FAILED");
-    // clearTimeout;
+    return alert("Password Generator Cancelled");
   }
   // If user enters incorrect length...
   else if (!(passLength >= 8 && passLength <= 128)) {
@@ -65,6 +64,7 @@ function generatePassword() {
 
   var collectPass = "";
   console.log(criteriaArr);
+
   //Randomly choose password characters based on the criteria selected.
   for (var i = 0; i < passLength; i++) {
     var randomChars = criteriaArr[Math.floor(Math.random() * criteriaArr.length)];
@@ -74,32 +74,7 @@ function generatePassword() {
   return collectPass
 }
 
-// Variable to push the randomized password characters to
 
-
-
-
-//   verifyCriteria();
-// var ver = []
-
-// // Veryfy password criteria selections
-// function verifyCriteria() {
-//   var ver = criteriaArr.includes(true);
-//   if (ver) {
-//     // Figure out steps to take if true... Run randomizer function??
-//   }
-//   else if (!(ver)) {
-//     // var warn = confirm("WARNING! You did not include any special, upper case, or numerical characters. Excluding these will produce a weak password using only lower case letters. Click OK to proceed or click Cancel to start over.")
-//     // Nest another if else Here...
-//     if (warn) {
-//       alert("ok clicked");
-//     }
-//     else {
-//       alert("cancel clicked");
-//       criteriaArr = [];
-//     }
-//   }
-// }
 
 
 
